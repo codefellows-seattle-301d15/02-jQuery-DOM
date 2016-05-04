@@ -1,4 +1,5 @@
-# MVC blog
+![CF](https://i.imgur.com/7v5ASc8.png)  MVC blog
+=======
 
 Work with the provided starter code to add structure and functionality a basic Blog web site.
 
