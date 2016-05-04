@@ -18,31 +18,28 @@ Take a moment to shake hands and introduce yourselves.
 
 You and your pair will have different experience levels, which is normal. You'll have opportunities to both teach and learn from your pair. Keep an open mind, and always be kind.
 
-The workflow may take a little getting used to, if you haven't done pairing before, so give yourself time to work through any git issues (aka: "gituations") that arise.
+The workflow may take a little getting used to if you haven't done pairing before, so give yourself time to work through any git issues (aka: "gituations") that arise.
 
 ## Setup your repo
 
 Here is a recommended workflow:
 
-1. Driver: fork this repository to your own account. This original repo (the one at `github.com/codefellows`) is the "upstream" repo.
+1. Driver: fork this repository to your own account.
 1. Your **forked repo** on GitHub will be your "origin" repo. Clone YOUR FORK to your local development environment:
-<li> Create a new directory named "301" - `mkdir 301/` (This will be your parent 301 directory and set you up for organizational success!)
-<li>`cd 301/`
-<li>`git clone your-forked-301-repo-url my-forked-301` (where the first argument after `clone` is your actual forked github repo URL, and the second argument here explicitly saves your forked repo name as 'my-forked-301' so you know exaclty what it is).
-1. Use this command in the root of your forked repo, so that it knows about the upstream repo:
-  - `git remote add upstream codefellows-git-url-here`
-  - (replace `codefellows-git-url-here` with the proper GitHub URL of the codefellows upstream repo, **not** your forked repo).
+1. Create a new directory named "301" - `mkdir 301/` (This will be your parent 301 directory and set you up for organizational success!)
+1. `cd 301/`
+2. `mkdir driver` to house the pair assignment repos where you drive.
+3. `cd driver`
+1. `git clone your-forked-301-repo-url your-name-partner-name-lab-00` (where the first argument after `clone` is your actual forked github repo URL, and the second argument should literally be your first name hyphen lab number // ex: rick-brian-lab-02).
 
-1. Now, you can sync changes from the upstream repo to your local master branch whenever you need them (do this at the beginning of each day):
-  - `git pull upstream master`
-  - `git checkout -b class-00` (for today, class-01)
 
 ## Write code together
 
 Now find those `TODO` items in the code, and tackle one of them.
 
-1. Driver: In your terminal, change directory into the `pair-assignment` folder.
+1. Driver: In your terminal, change directory into the repo directory.
 2. Change directory into the `starter-code` folder.
+3. `git checkout -b your-name-partner-name`
 1. Type `atom .` to open this folder as a project in Atom.
 1. Use the Atom "Find in Project" feature to locate all the TODO items.
 1. Work through one or two TODO items, testing your code as you go, until you are happy with how it's working.
@@ -52,12 +49,15 @@ Now find those `TODO` items in the code, and tackle one of them.
 1. Type `git diff --staged` to view the differences between the previous version and the staged version of your file.
 1. Type `git commit -m "Some meaningful message"` where Some meaningful message is a message that explains your commit.
 1. Type `git status` to make sure there is nothing to commit.
-1. Type `git push origin class-01` to push the class-01 branch changes to your forked repo on GitHub.
+1. Type `git push origin your-name-partner-name` to push the class-01 branch changes to your forked repo on GitHub.
+2. On GitHub, Add your navigator as a collaborator to your origin repo.
 
 ## Switch roles
-1. Driver: On GitHub, Add your navigator as a collaborator to your origin repo.
 
-1. Navigator: You can now clone the driver's fork, to your own local dev environment (if you haven't already, create a main "301" directory that will be the parent directory for your own forked repo, and a "navigator" directory created within this main "301" directory - **not your repo directory** - that will now contain your partner's repo, and future partner repos). Since you are now a collaborator, you can `pull` and `push` changes to and from `orgin`.
+1. Navigator: You can now clone the driver's fork, to your own local dev environment. If you haven't already: 
+2. `mkdir 301/` that will be the parent directory for your own forked repo
+3. `cd 301/`
+4. `mkdir navigator` within this main "301" directory - **not your class repo directory** - that will now contain your partner's repo, and future partner repos). Since you are now a collaborator, you can `pull` and `push` changes to and from `orgin`.
 
 1. Switch roles: The new driver now opens the code in Atom (see above), and has hands on the keyboard to work through the next one or two TODO items.
 
