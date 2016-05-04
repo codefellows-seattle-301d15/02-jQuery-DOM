@@ -1,5 +1,6 @@
 ![CF](https://i.imgur.com/7v5ASc8.png)  02-jQuery-and-the-DOM
 =======
+[![Build Status](https://travis-ci.org/codefellows-seattle-301d4/02-jQuery-and-the-DOM.svg?branch=master)](https://travis-ci.org/codefellows-seattle-301d4/02-jQuery-and-the-DOM)
 
 Work with the provided starter code to add structure and functionality a basic Blog web site.
 
@@ -55,7 +56,7 @@ Now find those `TODO` items in the code, and tackle one of them.
 
 ## Switch roles
 
-1. Navigator: You can now clone the driver's fork, to your own local dev environment. If you haven't already: 
+1. Navigator: You can now clone the driver's fork, to your own local dev environment. If you haven't already:
 2. `mkdir 301/` that will be the parent directory for your own forked repo
 3. `cd 301/`
 4. `mkdir navigator` within this main "301" directory - **not your class repo directory** - that will now contain your partner's repo, and future partner repos). Since you are now a collaborator, you can `pull` and `push` changes to and from `orgin`.
