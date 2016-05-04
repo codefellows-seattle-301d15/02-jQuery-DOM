@@ -1,4 +1,4 @@
-![CF](https://i.imgur.com/7v5ASc8.png)  02-jQuery-and-the-DOM
+![CF](https://i.imgur.com/7v5ASc8.png)  Lab 02: jQuery and the DOM
 =======
 [![Build Status](https://travis-ci.org/codefellows-seattle-301d4/02-jQuery-and-the-DOM.svg?branch=master)](https://travis-ci.org/codefellows-seattle-301d4/02-jQuery-and-the-DOM)
 
