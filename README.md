@@ -38,7 +38,7 @@ Here is the recommended workflow:
 1. `cp -r starter-code/ submissions/`driver-name-navigator-name (ex: cp -r starter-code/ submissions/rick-brian).
  - The command above copies the starter-code directory, names it after you and your partner's names, and places it in the submissions folder, which is where you will write code. **No changes should be made to the original starter code.**
 1. `git add submissions/`driver-name-navigator name (ex: git add submissions/rick-brian).
-1. `git commit -m 'add initial copy of starter-code`
+1. `git commit -m 'add initial copy of starter-code'`
 1. `cd submissions/`driver-name-navigator-name (ex: cd submissions/rick-brian).
 
 ## Write code together!
