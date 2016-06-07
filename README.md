@@ -16,30 +16,27 @@ Work in pairs. Take turns as "driver" and "navigator".
 
 ## Getting started with pair programming
 
-Take a moment to shake hands and introduce yourselves.
+Take a moment to shake hands and introduce yourselves. You and your pair may have different experience levels, which is normal. You'll have opportunities to both teach and learn from your partner. Keep an open mind, and always be kind :)
 
-You and your pair will have different experience levels, which is normal. You'll have opportunities to both teach and learn from your pair. Keep an open mind, and always be kind.
+The workflow may take a little getting used to, so give yourself time to work through any git issues (aka: "gituations") that arise.
 
-The workflow may take a little getting used to if you haven't done pairing before, so give yourself time to work through any git issues (aka: "gituations") that arise.
+**Take turns as 'driver' and 'navigator', alternating roles half-way (typically a couple TODOs or one hour, whichever arrives first).**
 
 ## Setup your repo
 
 Here is the recommended workflow:
 
-1. Driver: fork this repository to your own account.
-1. Your **forked repo** on GitHub will be your "origin" repo. Clone YOUR FORK to your local development environment:
+1. Driver: fork this repository if you haven't done so already.
+1. Your **forked repo** on GitHub will be your "origin" repo. Clone **your fork** to your local development environment:
 1. If you haven't done so yet, create a directory named "301" - `mkdir 301/` (This will be your parent 301 directory and set you up for organizational success!)
-1. `cd 301/`
-1. `mkdir driver` to house the pair assignment repos where you start out as the driver.
-1. `cd driver`
+1. Next, `cd 301/`
+1. `mkdir lab-assignments` to house the pair assignment repos.
+1. `cd lab-assignments`
+2. `mkdir my-forked-labs`
+3. `cd my-forked-labs`
 1. `git clone` this repo.
 1. `cd` into this repo.
-1. Immediately `git checkout -b` driver-name-navigator-name (ex: git checkout -b rick-brian).
-1. `cp -r starter-code/ submissions/`driver-name-navigator-name (ex: cp -r starter-code/ submissions/rick-brian).
- - The command above copies the starter-code directory, names it after you and your partner's names, and places it in the submissions folder, which is where you will write code. **No changes should be made to the original starter code.**
-1. `git add submissions/`driver-name-navigator name (ex: git add submissions/rick-brian).
-1. `git commit -m 'add initial copy of starter-code'`
-1. `cd submissions/`driver-name-navigator-name (ex: cd submissions/rick-brian).
+1. Immediately `git checkout -b` driver-name-navigator-name (ex: `git checkout -b rick-brian`).  
 
 ## Write code together!
 
@@ -47,42 +44,44 @@ Find those `TODO` items in the code, and tackle one of them.
 
 1. Driver: In your terminal, ensure that:
    - you are on a branch with you and your partner's namesake.
-   - you are currently within the directory also with you and your partner's namesake in the `submissions` folder.
+   - you are currently within the starter-code directory.
 
-1. Type `atom .` to open this folder as a project in Atom.
-1. Use the Atom "Find in Project" (command shift "f" if on a Mac) to locate all the TODO items.
-1. Work through one or two TODO items (or one hour, whichever arrives first), testing your code as you go, until you are happy with how it's working.
+1. Type `atom .` to open this starter-code folder as a project in Atom.
+1. Use the Atom "Find in Project" (command shift "f" if on a Mac) to locate all the `TODO:` items.
+1. Work through one or two TODO items before switching roles (or one hour, whichever arrives first), testing your code as you go.
 1. In your terminal type `git status` to view the files that you have changed. You should only see the files that you have worked on.
+2. Type `git diff` to see line-item changes with your down arrow key. (Type `q` to exit this mode!)
 1. Type `git add file1 file2` where file1, file2, etc. are the files that you have changed.
 1. Type `git status` to view the files that have been added to your commit. You should only see the files that you worked on.
-1. Type `git diff --staged` to view the differences between the previous version and the staged version of your file.
-1. Type `git commit -m "some meaningful message"` where Some meaningful message is a message that explains your commit.
-1. Type `git status` to make sure there is nothing to commit.
+1. Type `git commit -m "some meaningful message"` where Some meaningful message is a message that **thoroughly** explains your commit.
+1. Type `git status` to ensure there is nothing left to commit.
 1. Type `git push origin your-name-partner-name` to push this branch to your forked repo on GitHub.
 2. On GitHub, Add your navigator as a collaborator (go to settings -> collaborators).
-3. Slack your partner the repo link for them to clone down.
+3. Once they have accepted the invite to collaborate, `Slack` to your partner your forked repo link for them to clone down.
 
 ## Switch roles
 
 1. Navigator (AKA new Driver): You can now clone the driver's fork, to your own local dev environment. If you haven't already:
-2. `mkdir 301/` that will be the parent directory for your own forked repo
+2. `mkdir 301/` that will be the parent directory for all things 301.
 3. `cd 301/`
-4. `mkdir navigator` within this main "301" directory - **not your class repo directory** - this will now contain your partner's repo, and future partner repos when you initially start out as navigator and later switch as a driver). Since you are now a collaborator, you can `pull` and `push` changes to and from `orgin`.
-
-The new driver (original navigator):
-1. `git clone` the repo your patner Slacked you into your navigator folder.
-2. `git fetch origin` branch-name
-2. Now open the code in Atom. It's your turn to have the hands on the keyboard!
+4. `mkdir lab-assignments`
+5. `cd lab-assignments`
+6. `mkdir partners-forked-labs`
+7. `cd partners-forked-labs`
+8. The new driver (original navigator):
+  1. `git clone` the repo your patner Slacked you into your navigator folder.
+  2. `git fetch origin` branch-name
+  2. Now open the starter-code in Atom. It's your turn to have the hands on the keyboard!
 
 ## Submit your assignment
 
-When you are finished with your work (or if time runs out), then submit your work. To do this, you'll create a "Pull Request" (aka: "PR") to the upstream repo with your changes, and submit that PR link in Canvas.
+When you are finished with lab (or if the 2 hour time limit runs out), please submit your work. To do this, you'll create *one* Pull Request (aka: "PR") to the original repo with your changes, and you'll each submit that same PR link in Canvas.
 
 1. Ensure that all your local changes are committed, and pushed to your `origin` repo.
-2. Visit the origin repo on github.com.
-1. Create a new PR.
-1. Carefully review the PR to ensure the branches look correct.
-1. Write a good descriptive summary of your changes:
-  - Be sure to include how much time you spent on it, and who you worked with.
-  - Briefly reflect on and summarize your process.
-1. When you create the PR, it will have a unique URL. Copy this link, and paste it into the assignment submission form in Canvas. Both the driver and the navigator will submit the same PR link.
+2. Visit the origin repo on github.com. (or just type `git open` in the terminal if you have that package installed :wink:
+1. Create a new PR and ensure the branches look correct.
+1. Fill in the template based on the text box prompts:
+  1. Write a good descriptive summary of your changes:
+    - Be sure to include how much time you spent on it, and who you worked with.
+    - Briefly reflect on and summarize your process.
+1. When you create the PR, it will have a unique URL. Copy this link, share with your partner, and paste it into the assignment submission form in Canvas. Both the driver and the navigator will submit the same PR link.
