@@ -30,7 +30,7 @@ Article.prototype.toHtml = function() {
   return $newArticle;
 };
 
-ourLocalData.sort(function(curElem, nextElem) {
+ourLocalData.sort(function(b, b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
 });
 
