@@ -13,6 +13,8 @@ Article.prototype.toHtml = function() {
 
   $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
   $newArticle.find('time').text('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
+
+  return $newArticle;
 };
 
 /* This sort method is a standard JavaScript Array function
