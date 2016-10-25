@@ -1,4 +1,4 @@
-var ourLocalData = [
+var blogArticles = [
   {
     title:       'Bacon Ipsum',
     category:    'food',
