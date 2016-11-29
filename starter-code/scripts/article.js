@@ -7,7 +7,13 @@ function Article (options) {
    a placeholder for the object that will ultimately be
    passed in. Use all of the properties in blogArticles
    to populate the new Article data that we'll use.  */
-   this.title = options.title;
+  this.title = options.title;
+  this.category = option.category;
+  this.author = option.author;
+  this.authorUrl = option.authorUrl;
+  this.publishedOn = option.publishedOn;
+  this.body = option.body;
+
 };
 
 /* This toHtml function is one that we are creating, and it is
