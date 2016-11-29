@@ -10,6 +10,8 @@ function Article (options) {
    this.title = options.title;
 };
 
+/* This toHtml function is one that we are creating, and it is
+   being attached to the prototype. Why? */
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.attr('data-category', this.category);
@@ -36,10 +38,12 @@ blogArticles.sort(function(currentObject, nextObject) {
   return (new Date(nextObject.publishedOn)) - (new Date(currentObject.publishedOn));
 });
 
-blogArticles.forEach(function(ele) {
-  articles.push(new Article(ele));
+/* The forEach method is another standard JS array function
+   that behaves like a traditional for loop */
+blogArticles.forEach(function(articleObj) {
+  articles.push(new Article(articleObj));
 });
 
-articles.forEach(function(article) {
-  $('#articles').append(article.toHtml());
+articles.forEach(function(articleObj) {
+  $('#articles').append(articleObj.toHtml());
 });
