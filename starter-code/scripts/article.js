@@ -1,7 +1,7 @@
 var articles = [];
 
 function Article (options) {
-/* TODO: This is our Model constructor. It will take in
+/* TODONE: This is our Model constructor. It will take in
    our source data from blogArticles and instantiate a
    new Object according to this new definition. options is
    a placeholder for the object that will ultimately be
