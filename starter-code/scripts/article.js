@@ -4,7 +4,7 @@ function Article (options) {
   this.title = options.title;
   this.category = options.category;
   this.author = options.author;
-  this.authorURL = options.authorURL;
+  this.authorUrl = options.authorUrl;
   this.publishedOn = options.publishedOn;
   this.body = options.body;
 
@@ -15,12 +15,10 @@ being attached to the prototype. Why? */
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.attr('data-category', this.category);
-
-  $newArticle.find('a[href]').attr('Author Name', this.author);
-  $newArticle.find('href').text(this.authorURL);
+  $newArticle.find('address').attr('Author Name', this.author);
+  $newArticle.find('a[href]').attr(this.authorUrl);
   $newArticle.find('h1').text(this.title);
   $newArticle.find('.article-body').append(this.body);
-  // $newArticle.removeclass('template');
   $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
   $newArticle.find('time').text('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
   $newArticle.removeclass('template');
