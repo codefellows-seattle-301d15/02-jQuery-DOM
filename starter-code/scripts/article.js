@@ -10,8 +10,6 @@ function Article (options) {
 
 };
 
-/* This toHtml function is one that we are creating, and it is
-being attached to the prototype. Why? */
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.attr('data-category', this.category);
@@ -24,16 +22,9 @@ Article.prototype.toHtml = function() {
   return $newArticle;
 };
 
-/* This sort method is a standard JavaScript Array function
-that will iterate over an array and compare its values,
-and then arrange them in ascending or descending order
-according to the return value. We are comparing the
-publishedOn properties to arrange the blog posts in
-descending order (most recent first). */
 blogArticles.sort(function(currentObject, nextObject) {
   return (new Date(nextObject.publishedOn)) - (new Date(currentObject.publishedOn));
 });
-
 
 blogArticles.forEach(function(articleObj) {
   articles.push(new Article(articleObj));
