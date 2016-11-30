@@ -23,12 +23,12 @@ Article.prototype.toHtml = function() {
   /* TODONE: We also need to fill in:*/
   $newArticle.attr('data-category', this.category);
   $newArticle.find('h1').text(this.title);
-  $newArticle.attr('href', this.authorUrl);
-  $newArticle.find('a').text(this.author);
-  $newArticle.attr('article-body', this.body);
+  // $newArticle.find('a')('href', this.authorUrl);
+  $newArticle.find('a').attr('href', this.authorUrl).text(this.author);
+  $newArticle.find('.article-body').html(this.body);
   $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
   $newArticle.find('time').text('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-/* TODO: This cloned article is no longer a template, as it now
+/* TODONE: This cloned article is no longer a template, as it now
 has real data attached to it. Remove the class from this new article! */
   $newArticle.removeClass('template');
   return $newArticle;
