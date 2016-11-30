@@ -15,13 +15,12 @@ being attached to the prototype. Why? */
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.attr('data-category', this.category);
-  $newArticle.find('address').attr('Author Name', this.author);
-  $newArticle.find('a[href]').attr(this.authorUrl);
+  $newArticle.find('a').attr('href', this.authorUrl).text(this.author);
   $newArticle.find('h1').text(this.title);
   $newArticle.find('.article-body').append(this.body);
   $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
   $newArticle.find('time').text('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-  $newArticle.removeclass('template');
+  $newArticle.removeClass('template');
   return $newArticle;
 };
 
@@ -35,8 +34,7 @@ blogArticles.sort(function(currentObject, nextObject) {
   return (new Date(nextObject.publishedOn)) - (new Date(currentObject.publishedOn));
 });
 
-/* The forEach method is another standard JS array function
-that behaves like a traditional for loop */
+
 blogArticles.forEach(function(articleObj) {
   articles.push(new Article(articleObj));
 });
