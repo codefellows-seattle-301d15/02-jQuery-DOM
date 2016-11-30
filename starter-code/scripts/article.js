@@ -1,13 +1,19 @@
 var articles = [];
 
 function Article (options) {
-/* TODO: This is our Model constructor. It will take in
+/* TODONE: This is our Model constructor. It will take in
    our source data from blogArticles and instantiate a
    new Object according to this new definition. options is
    a placeholder for the object that will ultimately be
    passed in. Use all of the properties in blogArticles
    to populate the new Article data that we'll use.  */
-   this.title = options.title;
+  this.title = options.title;
+  this.category = options.category;
+  this.author = options.author;
+  this.authorUrl = options.authorUrl;
+  this.publishedOn = options.publishedOn;
+  this.body = options.body;
+
 };
 
 /* This toHtml function is one that we are creating, and it is
@@ -15,16 +21,21 @@ function Article (options) {
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
   $newArticle.attr('data-category', this.category);
-  /* TODO: We also need to fill in:
+  /* TODONE: We also need to fill in:
   1. author name
   2. author url
   3. article title
   4. article body
   5. publication*/
+  $newArticle.find('h1').html(this.title);
+  $newArticle.find('a').html(this.author);
+  $newArticle.find('a').attr('href', this.authorUrl);
+  $newArticle.find('.article-body').html(this.body);
   $newArticle.find('time[pubdate]').attr('title', this.publishedOn);
   $newArticle.find('time').text('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago');
-/* TODO: This cloned article is no longer a template, as it now
+/* TODONE: This cloned article is no longer a template, as it now
 has real data attached to it. Remove the class from this new article! */
+  $newArticle.removeAttr('class');
   return $newArticle;
 };
 
